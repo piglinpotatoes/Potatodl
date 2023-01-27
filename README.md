@@ -1,2 +1,2 @@
 # Potatodl
-A windows application that allows you to schedule downloads, view site details, download with custom device information and more
+This version is designed for the .NET framework
