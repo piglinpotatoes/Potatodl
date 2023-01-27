@@ -1,0 +1,5 @@
+D:\source\repos\Potatodl\nPotatodl\obj\Debug\net5.0-windows\nPotatodl.csproj.AssemblyReference.cache
+D:\source\repos\Potatodl\nPotatodl\obj\Debug\net5.0-windows\nPotatodl.GeneratedMSBuildEditorConfig.editorconfig
+D:\source\repos\Potatodl\nPotatodl\obj\Debug\net5.0-windows\nPotatodl.AssemblyInfoInputs.cache
+D:\source\repos\Potatodl\nPotatodl\obj\Debug\net5.0-windows\nPotatodl.AssemblyInfo.cs
+D:\source\repos\Potatodl\nPotatodl\obj\Debug\net5.0-windows\nPotatodl.csproj.CoreCompileInputs.cache
