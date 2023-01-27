@@ -1,4 +1,5 @@
 # Potatodownload
 A windows application that allows you to schedule downloads, view site details, download with custom HTTP headers and more, GUI or CLI
-![screenshot of the Potatodownload software](https://github.com/piglinpotatoes/Potatodl/blob/main/nice.png?raw=true)
+![screenshot of the Potatodownload GUI](https://github.com/piglinpotatoes/Potatodl/blob/main/nice.png?raw=true)
+![screenshot of the Potatodownload command-line](https://github.com/piglinpotatoes/Potatodl/blob/main/Screenshot%202023-01-27%20212214.jpg?raw=true)
 This version is designed for the .NET framework.
