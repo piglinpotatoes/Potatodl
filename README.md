@@ -6,3 +6,5 @@ This version is designed for the .NET framework.
 
 Move the "help.rtf" file into your build folder if you want the help menu to work.
 If you have any trouble building or using Potatodownload please make an Issue or Pull request. This program uses the [Microsoft.Toolkit.Uwp.Notifications](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/) package from NuGet.
+
+Yes this is PlNG
