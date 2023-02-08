@@ -5,6 +5,8 @@ A windows application that allows you to schedule downloads, view site details, 
 This version is designed for the .NET framework.
 
 Move the "help.rtf" file into your build folder if you want the help menu to work.
-If you have any trouble building or using Potatodownload please make an Issue or Pull request. This program uses the [Microsoft.Toolkit.Uwp.Notifications](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/) package from NuGet.
+If you have any trouble building or using Potatodownload please make an Issue or Pull request.
+This program uses the [Microsoft.Toolkit.Uwp.Notifications](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/) package from NuGet, which is under the MIT License.
+
 
 Yes I am PlNG
