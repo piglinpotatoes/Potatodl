@@ -24,6 +24,20 @@ namespace Potatodl
 {
     static class Program
     {
+        static void Download(string URL, string To)
+        {
+            var Webs = new System.Net.WebClient();
+            if (Properties.Settings.Default.headers.Contains("\n"))
+            {
+                foreach (string xz in Properties.Settings.Default.headers.Split('\n'))
+                {
+                    if (!string.IsNullOrWhiteSpace(xz))
+                        Webs.Headers.Add(xz);
+                }
+            }
+            File.WriteAllBytes(To, Webs.DownloadData(URL));
+        }
+
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -40,16 +54,7 @@ namespace Potatodl
                     case "dl" or "/d":
                         try
                         {
-                            var Webs = new System.Net.WebClient();
-                            File.WriteAllBytes(args[2], Webs.DownloadData(args[1]));
-                            if (Properties.Settings.Default.headers.Contains("\n"))
-                            {
-                                foreach (string xz in Properties.Settings.Default.headers.Split('\n'))
-                                {
-                                    if (!string.IsNullOrWhiteSpace(xz))
-                                        Webs.Headers.Add(xz);
-                                }
-                            }
+                            Download(args[1], args[2]);
                             Console.WriteLine($"Successfully downloaded {args[1]} to {args[2]}.");
                         }
                         catch (Exception Xe) { Console.WriteLine("oh no, " + Xe.Message); }
@@ -85,10 +90,9 @@ namespace Potatodl
                     case "schedule" or "/s":
                         try
                         {
-                            var Webs = new System.Net.WebClient();
                             for (; ; )
                             {
-                                File.WriteAllBytes(args[3], Webs.DownloadData(args[2]));
+                                Download(args[2], args[3]);
                                 Console.WriteLine($"Successfully downloaded {args[2]} to {args[3]}.");
                                 System.Threading.Thread.Sleep(Convert.ToInt32(args[1]) * 60000);
                             }
@@ -108,7 +112,7 @@ namespace Potatodl
                                 folder = Path.GetDirectoryName(args[3]);
                                 fileName = Path.GetFileNameWithoutExtension(args[3]);
                                 extension = Path.GetExtension(args[3]);
-                                File.WriteAllBytes(Path.Combine(folder, $"{fileName}{hting++}{extension}"), Webs.DownloadData(args[2]));
+                                Download(args[2], Path.Combine(folder, $"{fileName}{hting}{extension}"));
                                 Console.WriteLine($"Successfully downloaded {args[2]} to {Path.Combine(folder, $"{fileName}{hting}{extension}")}.");
                                 System.Threading.Thread.Sleep(Convert.ToInt32(args[1]) * 60000);
                             }
